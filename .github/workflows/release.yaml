@@ -17,7 +17,7 @@ defaults:
 
 jobs:
   build-envoy-macos:
-    runs-on: macos-15-xlarge
+    runs-on: macos-15
     name: "Build Envoy® for MacOS Apple Silicon"
     permissions:
       contents: read
@@ -83,7 +83,7 @@ jobs:
             --compilation_mode=opt
             --curses=no
             --verbose_failures
-            --define=wasm=enabled
+            --define=wasm=disabled
             --copt=-Wno-unused-but-set-variable
             --config=clang
             --action_env=CC=${CC}
